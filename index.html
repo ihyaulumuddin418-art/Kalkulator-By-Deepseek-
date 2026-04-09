@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <title>Raven Kalkulator · Serbaguna</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <!-- CSS Eksternal -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="calculator-container stagger-fade">
+        <div class="brand">
+            <h1>RAVEN KALKULATOR</h1>
+            <span>v1.0 · monochrome</span>
+        </div>
+
+        <!-- Mode Tabs -->
+        <div class="mode-tabs" id="modeTabs">
+            <button class="mode-btn active" data-mode="standard">Standar</button>
+            <button class="mode-btn" data-mode="scientific">Ilmiah</button>
+            <button class="mode-btn" data-mode="financial">Keuangan</button>
+            <button class="mode-btn" data-mode="health">Kesehatan</button>
+            <button class="mode-btn" data-mode="convert">Konversi</button>
+            <button class="mode-btn" data-mode="tax">Pajak</button>
+            <button class="mode-btn" data-mode="engineering">Teknik</button>
+        </div>
+
+        <div class="main-panel">
+            <!-- Area Kalkulator -->
+            <div class="calc-area">
+                <div class="display-container">
+                    <div class="expression" id="expressionDisplay"></div>
+                    <div class="result" id="resultDisplay">0</div>
+                </div>
+                <div id="dynamicPanel" class="mode-panel">
+                    <!-- Akan diisi oleh JavaScript -->
+                </div>
+            </div>
+
+            <!-- Panel Riwayat & Memori -->
+            <div class="history-panel">
+                <div class="history-header">
+                    <span>📋 Riwayat</span>
+                    <button class="btn-outline" id="clearHistoryBtn" style="padding:4px 12px;">Hapus</button>
+                </div>
+                <ul class="history-list" id="historyList">
+                    <li style="color:#aaa; text-align:center; list-style:none;">Belum ada riwayat</li>
+                </ul>
+                <div class="history-actions">
+                    <button class="btn-outline" id="exportTxtBtn">📄 Ekspor .txt</button>
+                    <button class="btn-outline" id="exportPdfBtn">🖨️ Cetak/PDF</button>
+                </div>
+                <div style="margin-top:12px; display:flex; gap:8px;">
+                    <button class="btn-outline" id="mcBtn">MC</button>
+                    <button class="btn-outline" id="mrBtn">MR</button>
+                    <button class="btn-outline" id="mPlusBtn">M+</button>
+                    <button class="btn-outline" id="mMinusBtn">M−</button>
+                </div>
+                <div class="footer-note" id="memoryIndicator">Memori: 0</div>
+            </div>
+        </div>
+    </div>
+    <!-- JavaScript Eksternal -->
+    <script src="script.js"></script>
+</body>
+</html>
